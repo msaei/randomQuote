@@ -5,7 +5,9 @@ function getRandomQuote(){
 		dataType: "jsonp",
 		data: "method=getQuote&format=jsonp&lang=en&jsonp=?",
 		success: function(response){
-			alert(response.quoteText);
+			//alert(response.quoteText);
+			$("#quote").html(response.quoteText);
+			$("p").html(response.quoteAuthor);
 
 		}
 	});
