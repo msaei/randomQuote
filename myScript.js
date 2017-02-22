@@ -6,8 +6,8 @@ function getRandomQuote(){
 		data: "method=getQuote&format=jsonp&lang=en&jsonp=?",
 		success: function(response){
 			//alert(response.quoteText);
-			$("#quote").html("<h3>" + response.quoteText +
-				"</h3><p> " + response.quoteAuthor + "</p>");
+			$("#quote").html( response.quoteText +
+				"<br> \- " + response.quoteAuthor + "</p>");
 
 
 		}
